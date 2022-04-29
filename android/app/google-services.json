@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "78411646352",
+    "project_id": "fooddukedeapp",
+    "storage_bucket": "fooddukedeapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78411646352:android:63dfb352e5093ded9f1f15",
+        "android_client_info": {
+          "package_name": "com.fooddukedeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78411646352-h7hcd4jneic7i7jourp12s47recurams.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fooddukedeapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "78411646352-av6c0neh47qkbi17idf29n9fjb7dv1h6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOVgsKHQ42Yw_LtoXvqhQQwCaKIe7MjrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78411646352-av6c0neh47qkbi17idf29n9fjb7dv1h6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
