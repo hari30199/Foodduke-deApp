@@ -142,8 +142,8 @@ const size1 = ( orderedlist != null &&  orderedlist != undefined) ? (
               <Card>
               <Title><AntDesign name='clockcircleo' size={14}/>  <TimeAgo time={item.updated_at} interval={2000} /></Title>
               <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-              <Text style={{left:10,color:'#8360c2',fontWeight:'700'}}>{item.restaurant.name}</Text>
-              <Text style={{color:'#8360c2',right:10,fontWeight:'700'}}>{item.unique_order_id}</Text>
+              <Text style={{left:10,color:'#86C200',fontWeight:'700'}}>{item.restaurant.name}</Text>
+              <Text style={{color:'#86C200',right:10,fontWeight:'700'}}>{item.unique_order_id}</Text>
               </View>
               <Text numberOfLines={1} style={{top:10,width:340}}> <Title> <EvilIcons name='location' size={18}/>{item.address}</Title></Text>
               </Card>
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
   logout:{
     left:52,
     fontSize:14,
-    backgroundColor:'#FEA102',
+    backgroundColor:'#86C200',
     padding:6,
     borderRadius:4,
     color:'white',

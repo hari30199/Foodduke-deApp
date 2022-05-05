@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
        
      },
      logout:{
-       backgroundColor:'#FEA102',
+       backgroundColor:'#86C200',
        borderRadius:4,
        top:6,
        right:10,

@@ -231,8 +231,8 @@ const Deliveryorder = () => {
   })
     .then((response) =>(response.json()))
     .then((result) => {
-      // console.log('name',result)
-       setdeliveryorder(result),Ordered();
+      console.log('name',result)
+       setdeliveryorder(result.user),Ordered();
     })
     .catch((error) => console.error(error))
     .finally(() => setLoading(false));
@@ -241,8 +241,9 @@ const Deliveryorder = () => {
 const pinverify = () =>{
   if (deliverypin == '' )
   return alert('Enter Delivery Pin')
-  else 
+  else if (deliveryorder?.delivery_pin == deliverypin)
   return Deliveryorder()
+  else return alert('Incorrect Delivery Pin')
 }
 
 const incorrectmsg = () =>{
@@ -284,17 +285,7 @@ const getTime = () =>{
 }  
 
 if (itemdata.orderstatus_id == 5){
-  return (
-    <Dialog.Container>
-    <Dialog.Title>Account delete</Dialog.Title>
-    <Dialog.Description>
-      Do you want to delete this account? You cannot undo this action.
-    </Dialog.Description>
-    <Dialog.Button label="Cancel" />
-    <Dialog.Button label="Delete" />
-  </Dialog.Container>
-  )
-
+   alert('order delivered'),()=>navigation.goBack()
 }
  
 // console.log(deliverypin)
@@ -317,7 +308,7 @@ if (itemdata.orderstatus_id == 5){
 
 <Container>
       {isLoading ? 
-       <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+       <View style={{justifyContent:'center',alignItems:'center',alignSelf:'center',height:600,top:10}}>
        <Image style={{width:250,height:250}}
         source={require('../../assets/loader.gif')} />
           </View>:
@@ -435,7 +426,7 @@ if (itemdata.orderstatus_id == 5){
             </ScrollView>
            </Container>
           
-           <Heading style={{backgroundColor:'#FEA102'}}>
+           <Heading style={{backgroundColor:'#86C200'}}>
            { itemdata.orderstatus_id == 2 ?
            (
             <SwipeButton
@@ -450,9 +441,9 @@ if (itemdata.orderstatus_id == 5){
             onSwipeSuccess={() =>
              { Acceptorder() ,Ordered()}
             }
-            railBorderColor="#FEA102"
-            railBackgroundColor="#FEA102"
-            thumbIconBorderColor='#FEA102'
+            railBorderColor="#86C200"
+            railBackgroundColor="#86C200"
+            thumbIconBorderColor='#86C200'
             title="Accept"
             thumbIconBackgroundColor="#0d101d"
             railFillBackgroundColor="#0d101d"
@@ -478,9 +469,9 @@ if (itemdata.orderstatus_id == 5){
             onSwipeSuccess={() =>
               {pickeduporder(),Ordered()}
             }
-            railBorderColor="#FEA102"
-            railBackgroundColor="#FEA102"
-            thumbIconBorderColor='FEA102'
+            railBorderColor="#86C200"
+            railBackgroundColor="#86C200"
+            thumbIconBorderColor='#86C200'
             title="Picked Up"
             thumbIconBackgroundColor="#0d101d"
             railFillBackgroundColor="#0d101d"
@@ -503,9 +494,9 @@ if (itemdata.orderstatus_id == 5){
             onSwipeSuccess={() =>
               pinverify()
             }
-            railBorderColor="#FEA102"
-            railBackgroundColor="#FEA102"
-            thumbIconBorderColor='#FEA102'
+            railBorderColor="#86C200"
+            railBackgroundColor="#86C200"
+            thumbIconBorderColor='#86C200'
             title="Delivered"
             thumbIconBackgroundColor="#0d101d"
             railFillBackgroundColor="#0d101d"
@@ -551,7 +542,7 @@ const styles = StyleSheet.create({
     paddingBottom:8
   },
   getdirections:{
-    backgroundColor:'#FEA102',
+    backgroundColor:'#86C200',
     padding:6,
     width:126,
     borderRadius:4,

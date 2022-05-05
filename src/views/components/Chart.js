@@ -74,7 +74,7 @@ return (
       width={375}
       height={300}
       barRadius={2}
-      barColor='#84E9F4'
+      barColor='#4F459F'
       barWidthPercentage={0.75}
       baseConfig={config}
       style={styles.chart}
